@@ -1,4 +1,4 @@
-### ⚠️This repo is not up to date with its releases, for any modification of this fork, use the source files in latest relaese⚠️
+### ⚠️This repo is not up to date with its releases, for any modifications or contributions to this fork, use the source files in the latest release⚠️
 
 # Instructions for this build
 
