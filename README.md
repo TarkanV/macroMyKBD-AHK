@@ -1,3 +1,31 @@
+### ⚠️This repo is not up to date with its releases, for any modification of this fork, use the source files in latest relaese⚠️
+
+# Instructions for this build
+
+First download and unzip the latest build from the [release](https://github.com/TarkanV/macroMyKBD-AHK/releases/tag/ahkv2.1) page.
+
+### Zadig
+1. Download [Zadig](https://zadig.akeo.ie/) and execute it. 
+a. Plugin the keyboard you wish to configure, if it isn't already configured. 
+b. Click on Options->List All Devices 
+c. Choose your keyboard from the dropdown menu. If you are not sure which one is the right one, try to unplug it an see which one disappears. 
+d. Use the small arrows, to change the driver to be installed, you have to use ``WinUSB. 
+e. Click on install driver.  
+f. The first field next to USB ID` is the vendor ID, the second one the product ID. You will need them when configuring, so write them down or just keep Zadig open.
+g. Open action.yml, enter the vendor and prod info you previously wrote down. 
+h. You can also optionally change the name the keyboard and add more keyboards.
+
+
+### AutoHotKey
+
+1. Download and Install [AutoHotkey v2.1-alpha.18](https://www.autohotkey.com/download/2.1/AutoHotkey_2.1-alpha.18_setup.exe)
+2. Run kb-config.ahk and wait for the "MacroMyKB Loaded!" message to appear.
+3. Test out your configured keyboard for regular input.
+3. You can test out the macros functionality with those example hotkeys : Ctrl+1 or Alt+2 (you can remove or change them in kb-config.ahk)
+4. To add or edit your own macro actions, open kb-config.ahk in notepad or or any text/code editor
+
+
+
 # macroMyKBD
 
 macroMyKBD is a tool, which enables you too add macro functionality to your keyboard on Windows (7, 8 & 10). 
@@ -18,27 +46,25 @@ Currently this can only be a batch command, however support for custom scripting
 
 ## Installation & Setup
 
-A quick Video-Tutorial is also available: https://youtu.be/k5ltJ_6T3qI (by @KGT1).
-
-1. Install NodeJS **v10**: Download it [here](https://nodejs.org/dist/v10.17.0/node-v10.17.0-x64.msi). Afterwards just install it, the installer should be self explanatory.
+1. Install NodeJS **v10**: Download it [here](https://nodejs.org/en/download/). Afterwards just install it, the installer should be self explanatory.
 2. Install macroMyKBD: Download the newest release from the [Release Page](http://github.com/lal12/macromykbd/releases) and unzip it whereever you like. For the next step open the folder containing the unzipped files.
 3. Download [Zadig](https://zadig.akeo.ie/) and execute it.
-    - a. Plugin the keyboard you wish to configure, if it isn't already configured.
-    - b. Click on Options->List All Devices
-    - c. Choose your keyboard from the dropdown menu. If you are not sure which one is the right one, try to unplug it an see which one disappears.
-    - d. Use the small arrows, to change the driver to be installed, you have to use `WinUSB`.
-    - e. Click on install driver. 
-    - f. The first field next to `USB ID` is the vendor ID, the second one the product ID. You will need them when configuring, so write them down or just keep Zadig open.
+    a. Plugin the keyboard you wish to configure, if it isn't already configured.
+    b. Click on Options->List All Devices
+    c. Choose your keyboard from the dropdown menu. If you are not sure which one is the right one, try to unplug it an see which one disappears.
+    d. Use the small arrows, to change the driver to be installed, you have to use ``WinUSB`.
+    e. Click on install driver. 
+    f. The first field next to `USB ID` is the vendor ID, the second one the product ID. You will need them when configuring, so write them down or just keep Zadig open.
 4. Now you should start to configure your actions: See section [action.yml](#action.yml) for more info on that. 
 5. Check if the `action.yml` works fine, by executing the `start.bat`, if no errors occur the config file is fine. Now you can test if it works as intended.
 6. Usually you want macroMyKBD to start when the system starts. There are several ways to do this, and there are plenty tutorials for this online. The easiest way is to create a shortcut to `start.bat` in the autostart folder.
 
-## actions.yml
+## action.yml
 
-The actions.yml is the file containing the configuration, it is written in a format called YAML. 
+The action.yml is the file containing the configuration, it is written in a format called YAML. 
 How YAML exactly works can be read in many online tutorials, an example file is included.
 
-If macroMyKBD is running, while editing `actions.yml`, it needs to be restarted.
+If macroMyKBD is running, while editing `action.yml`, it needs to be restarted.
 
 The action.yml containes one or multiple devices, each device has a name, a vendor id (`vendor`) and a product id (`prod`).
 You can define multiple macros (actions), a macro contains a command (`cmd`) just a string you also could execute on a command prompt.
