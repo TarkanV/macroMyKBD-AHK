@@ -22,7 +22,7 @@ h. You can also optionally change the name the keyboard and add more keyboards.
 2. Run kb-config.ahk and wait for the "MacroMyKB Loaded!" message to appear.
 3. Test out your configured keyboard for regular input.
 3. You can test out the macros functionality with those example hotkeys : Ctrl+1 or Alt+2 (you can remove or change them in kb-config.ahk)
-4. To add or edit your own macro actions, open kb-config.ahk in notepad or or any text/code editor
+4. To add or edit your own macro actions, open kb-config.ahk in notepad or or any text/code editor and follow its instructions.
 
 
 
